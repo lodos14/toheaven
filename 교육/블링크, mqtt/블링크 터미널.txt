@@ -1,0 +1,17 @@
+cd /opt/blynk-server
+java -jar blynk-server.jar -dataFolder /opt/blynk-server
+
+
+공유기 바꿀 때
+ps aux | grep java  프로세스 실행 보는법
+
+sudo kill -9 9195, 9196   프로세스 삭제
+
+
+
+블링크 커스텀 
+https://192.168.101.101:9443/admin
+id :soda@soda.cc
+
+블링크 기능
+https://docs.blynk.cc/
