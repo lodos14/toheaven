@@ -3,15 +3,15 @@
 
 int main(){
 	/*
-	  namespace : ÀÌ¸§°ø°£
-	  std °´Ã¼(instance °´Ã¼)
-	  :: => scope ¿¬»êÀÚ(¼ÒÀ¯ ¿¬»êÀÚ), ~²¨
+	  namespace : ì´ë¦„ê³µê°„
+	  std ê°ì²´(instance ê°ì²´)
+	  :: => scope ì—°ì‚°ì(ì†Œìœ  ì—°ì‚°ì), ~êº¼
 	  std:: => input : cin(=console input), cout
 	  */
 	std::cout << TEXT;
-	// ÇÑ ÁÙ ÁÖ¼®
+	// í•œ ì¤„ ì£¼ì„
 	/*
-	  ¿©·¯ ÁÙ ÁÖ¼®
+	  ì—¬ëŸ¬ ì¤„ ì£¼ì„
 	 */
 	return 0;
 }
