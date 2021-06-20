@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <link rel="stylesheet" href="test.css"> <!--외부 파일을 불러서 적용-->
+      
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          h1{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> <!--속성에서 적용하는 방법-->
+    <h1 style="color: red;">Hello World...!</h1>
+</body>
+</html>
+
+
+
+<!--전체 선택자 * -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <link rel="stylesheet" href="test.css"> <!--외부 파일을 불러서 적용-->
+      
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          *{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1>Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+</body>
+</html>
+
+
+
+<!--태그 선택자 h, p .... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <link rel="stylesheet" href="test.css"> <!--외부 파일을 불러서 적용-->
+      
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          h1, p{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1>Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+</body>
+</html>
+
+
+
+<!--아이디 선택자 #id -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          #heading{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1 id="heading">Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+</body>
+</html>
+
+
+<!--클래스 선택자 . -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          .a.b.c{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1 class="a b c">Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <!--p class 는 a, b 만 가지므로 안됨-->
+    <p class = "a b">Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+</body>
+</html>
+
+<!--아이디 선택자 #id -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <!-- 내부에서 적용하는 방법-->
+      <style>   
+          #heading{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1 id="heading">Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+</body>
+</html>
+
+<!--후손 선택자와 자손 선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <!--body p : 바디 밑에 있는 p태크 전부
+          body li : 바디 밑에 있는 모두 li태그
+          body > p  : 바디의 자손 p태그(li는 후손이기 때문에 안됨)        
+    -->   
+      <style>   
+          body p{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+
+    <h1 id="heading">Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+    <ul>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ul>
+
+</body>
+</html>
+
+
+
+<!--속성선택자[] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+
+      <!--
+         [title] 하면 title 전부
+         [title = test] '' 생략가능
+         h1[title]  h1중 title있는 녀석들
+      -->
+        <style>   
+          [title="test"]{
+             color: red;   
+          }
+      </style>   
+      </head>
+<body> 
+    <h1 title="test">Hello</h1>
+    <h1 id="heading">Hello World...!</h1>
+    <h2>Lorem ipsum</h2>
+    <p>Ad minim sunt do nulla ipsum deserunt qui nulla mollit ipsum sint.</p>
+    <ul>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ul>
+
+</body>
+</html>
+
+
