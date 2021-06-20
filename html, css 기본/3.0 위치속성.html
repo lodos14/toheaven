@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            margin:0; padding:0;  /* 마진과 패딩을 0을 줘야 딱 100px이동*/ }
+        .box{
+            width: 100px; height: 100px;
+            position: absolute;   /* absolute를 사용하면 기본적인 좌표잡는 방식을  무시 /
+                                     지정된 애들은 기존의 태그들과 완전히 다른 세계*/}
+        .red{background-color: red;
+            left: 100px;   /*left : 100px (왼쪽을 기준으로 100px 이동*/
+            top: 100px;    /*top : 100px (위쪽을 기준으로 100px 이동*/
+            right: 100px;   /*left , top이 우선 만약 다쓰고 box의 너비 높이를 지우면 가로세로 100px 떨어진 큰 사각형 생성*/
+            bottom: 100px;
+            /*z-index: 2000;*/}  
+        .green{
+            background-color: green;
+            left: 150px;
+            top: 150px;
+             /*z-index: 1000;*/}   /* z-index 겹칠 때 앞 뒤 위치 조정 */
+        .blue{
+            background-color: blue;
+            left: 200px;
+            top: 200px; 
+             /*z-index: 0;*/}
+        .container{
+            position: relative;     /*자식이 부모의 위치도 못 알아보고 위치를 잡음 
+                                    position을 absolute로 지정한 태그가 있으면
+                                    부모 대그의 position을 relative로 지정한다*/ 
+                                    /*자식이 이세계로 넘어가서 부모는 정확하게 자식이
+                                    어디있는지 알 수 없다. 하지만 대충 어느 좌표에 있는지
+                                    예측하고 감싸줄 수는 있다. 내부에 요소를 채우던지
+                                    height속성을 강제 지정해서 감싸준다.
+                                    요소를 채워서 맞춰줄경우 오버플로우가 발생한는데 */ 
+            
+            height: 400px;
+            overflow: hidden;       /* 이렇게 하면 넘어가는 부분을 감춰줌
+                                     scroll하면 넘치는 부분을 스크롤해서 볼 수 있음*/
+        } 
+            
+    </style>
+    
+</head>
+<body>     
+    <h1>Start</h1>  
+    <div class="container">  
+        <P>Et et aliquip do laborum sint excepteur nostrud officia. Quis sit minim cillum nisi amet labore consectetur mollit sint laboris nulla. Ad Lorem velit est esse deserunt. Dolore officia labore exercitation nulla velit exercitation incididunt cupidatat minim occaecat do commodo.
+
+Enim laborum reprehenderit amet reprehenderit esse non. Ad eiusmod nulla eiusmod ut id cupidatat. Proident dolor eiusmod sit in sunt laborum. Mollit esse elit aliqua quis labore dolore quis veniam occaecat tempor esse.
+
+Aliqua occaecat occaecat officia eiusmod laborum nulla ad. Commodo incididunt cupidatat consectetur reprehenderit in do qui veniam duis aute nisi enim. Minim ex duis enim excepteur enim eu consequat et.Et et aliquip do laborum sint excepteur nostrud officia. Quis sit minim cillum nisi amet labore consectetur mollit sint laboris nulla. Ad Lorem velit est esse deserunt. Dolore officia labore exercitation nulla velit exercitation incididunt cupidatat minim occaecat do commodo.
+
+Enim laborum reprehenderit amet reprehenderit esse non. Ad eiusmod nulla eiusmod ut id cupidatat. Proident dolor eiusmod sit in sunt laborum. Mollit esse elit aliqua quis labore dolore quis veniam occaecat tempor esse.
+
+Aliqua occaecat occaecat officia eiusmod laborum nulla ad. Commodo incididunt cupidatat consectetur reprehenderit in do qui veniam duis aute nisi enim. Minim ex duis enim excepteur enim eu consequat et.Et et aliquip do laborum sint excepteur nostrud officia. Quis sit minim cillum nisi amet labore consectetur mollit sint laboris nulla. Ad Lorem velit est esse deserunt. Dolore officia labore exercitation nulla velit exercitation incididunt cupidatat minim occaecat do commodo.
+
+Enim laborum reprehenderit amet reprehenderit esse non. Ad eiusmod nulla eiusmod ut id cupidatat. Proident dolor eiusmod sit in sunt laborum. Mollit esse elit aliqua quis labore dolore quis veniam occaecat tempor esse.
+
+Aliqua occaecat occaecat officia eiusmod laborum nulla ad. Commodo incididunt cupidatat consectetur reprehenderit in do qui veniam duis aute nisi enim. Minim ex duis enim excepteur enim eu consequat et.</P>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+    <h1>END</h1>
+</body>
+</html>
