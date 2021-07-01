@@ -66,7 +66,100 @@
 // console.log(player)
 
 //----------------------------------------------------------------------------
+
+// 5. function
+
+// function plus(a, b){
+//   console.log(a + b);
+// }
+// function divide(a, b){
+//   console.log(a / b);
+// }
+// plus(8, 60);
+// divide(6, 60);
+
+
+
+// const player = {
+//   name: "nico", 
+//   sayHello: function sayHello(otherPersonsName){ // 객체 밖에서의 function sayHello() 이랑 같음
+//   console.log("hello! " + otherPersonsName + " nice to meet you");  
+//   }
+// };
+
+// console.log(player.name);
+// player.sayHello("lynn");
+
+
+
+// function plus(a, b){
+//   console.log(a + b);
+// }
+// plus(5, 5);
+
+// console.log(player ,console)
+
+// const calculator = {
+//   add:function(a, b){
+//     console.log(a + b)
+//   },
+//   sub: function(a, b){
+//     console.log(a - b)
+//   },
+//   div: function(a , b){
+//     console.log(a / b)
+//   },
+//   powerof:function(a, b){
+//     console.log(a ** b)
+//   }
+// };
+
+// calculator.add(4, 2);
+// calculator.sub(4, 2);
+// calculator.div(4, 2);
+// calculator.powerof(4, 2);
+
+
+
+
+// const age = 96;
+// function calculateKrAge(ageOfForeigner){
+//   return ageOfForeigner + 2;
+// }
+
+// const krAge = calculateKrAge(age);
+
+// console.log(krAge)
+
 //----------------------------------------------------------------------------
+// 6. type
+
+// const age = prompt("How old are you?");  //  prompt() 사용자에게 창을 띄어줌
+
+// console.log(typeof "15", typeof parseInt("15")); // parseInt() number로 타입 변경
+
+
+// 7. 조건문
+
+ const age = parseInt( prompt("How old are you") ); // number로 타입변경이 불가하면 NaN 반환
+ console.log(isNaN(age)); // isNaN() NaN인가요 물어보는 함수 bool 반환
+
+ if(isNaN(age) || age < 0){
+  console.log("Please write a real positive number");
+ }else if (age < 18) {
+  console.log("You are too young."); 
+ }else if(age >= 18 && age <= 50){
+  console.log("you can drink");
+ }else if(age > 50 && age <=80){
+   console.log("You should exercise")
+ }else if(age === 100){                 // not은 !==
+   console.log("wow you are wise")
+ }
+ else if (age > 80){
+  console.log("You can do whaterver you want.");
+ }
+
+
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
