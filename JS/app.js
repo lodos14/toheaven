@@ -36,23 +36,150 @@
 
 // 3. 링크 기본동작 막기
 
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");   
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = document.querySelector("#login-form input");   
 
-const link = document.querySelector("a");
 
-function onLoginSubmit(event){    
-  event.preventDefault();  
-  console.log(loginInput.value);       
-}
+// const link = document.querySelector("a");
 
-function handleLinkClick(event){
-  event.preventDefault();
-  console.log(event);
-}
+// function onLoginSubmit(event){    
+//   event.preventDefault();
+// }
 
-loginForm.addEventListener("submit", onLoginSubmit) // -> 자바에서 함수를 실행시키는게 브라우저가 정보를 담고 실행해줌
-link.addEventListener("click",handleLinkClick)
+// function handleLinkClick(event){
+//   event.preventDefault();
+//   console.log(event);
+// }
+
+// loginForm.addEventListener("submit", onLoginSubmit) // -> 자바에서 함수를 실행시키는게 브라우저가 정보를 담고 실행해줌
+// link.addEventListener("click",handleLinkClick)
+
+// 4. user 이름 저장하고 보이기
+
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = document.querySelector("#login-form input");   
+// const greeting = document.querySelector("#greeting");
+
+// const HIDDEN_CLASSNAME = "hidden";
+
+// function onLoginSubmit(event){    
+//   event.preventDefault();
+//   const username = loginInput.value;
+//   loginForm.classList.add(HIDDEN_CLASSNAME);
+//   console.log(loginInput.value);
+// //greeting.innerText = "Hello " + username;
+//   greeting.innerText = `Hello ${username}` ;
+//   greeting.classList.remove(HIDDEN_CLASSNAME);
+// }
+
+// loginForm.addEventListener("submit", onLoginSubmit) 
+
+// 5. 새로고침해도 user이름 기억하기 ex) 유투브를 새로고침 해도 볼륨 조절 저장
+// (localStorage.setItem() : localStorage에 정보 저장 localStorage.getItem(), localStorage.removeItem())
+
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = document.querySelector("#login-form input");   
+// const greeting = document.querySelector("#greeting");
+
+// const HIDDEN_CLASSNAME = "hidden";
+// const USERNAME_KEY = "username";
+
+// function onLoginSubmit(event){    
+//   event.preventDefault();
+//   const username = loginInput.value;
+//   localStorage.setItem(USERNAME_KEY, username);
+//   loginForm.classList.add(HIDDEN_CLASSNAME);
+//   console.log(loginInput.value);
+// //greeting.innerText = "Hello " + username;
+//   greeting.innerText = `Hello ${username}` ;
+//   greeting.classList.remove(HIDDEN_CLASSNAME);
+// }
+
+// 6. 유저정보 저장 유무에 따라 출력화면 정하기
+
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = document.querySelector("#login-form input");   
+// const greeting = document.querySelector("#greeting");
+
+// const HIDDEN_CLASSNAME = "hidden";
+// const USERNAME_KEY = "username";
+
+// const savedUsername = localStorage.getItem(USERNAME_KEY)
+
+// function onLoginSubmit(event){    
+//   event.preventDefault();
+//   const username = loginInput.value;
+//   localStorage.setItem(USERNAME_KEY, username);
+//   loginForm.classList.add(HIDDEN_CLASSNAME);
+//   console.log(loginInput.value);
+//   paintGreetings(username);
+// }
+
+// function paintGreetings(username){
+//   greeting.innerText = `Hello ${username}` ;
+//   greeting.classList.remove(HIDDEN_CLASSNAME);
+// }
+
+// if(savedUsername === null){
+//   loginForm.classList.remove(HIDDEN_CLASSNAME);
+//   loginForm.addEventListener("submit", onLoginSubmit);
+// }
+// else{
+//   paintGreetings(savedUsername);
+// }
+
+// 7. intervals, timeout
+
+// const clock = document.querySelector("h2#clock");
+
+// // intervals(매번 일어나느것 예를 들어 매 2초) timeout(일정시간이 지나고 한 번만 실행)
+
+// function sayHello(){
+//     console.log("hello");
+// }
+
+// setInterval(sayHello, 5000);
+// setTimeout(sayHello,5000);
+
+// 8. clock
+
+// const clock = document.querySelector("h2#clock");
+
+// function getClock(){
+//     const date = new Date();
+//     clock.innerText = (`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
+// }
+// getClock() // 1초후에 실행되므로 바로 실행할 수 있도록 함수 호출
+// setInterval(getClock, 1000);
+
+// // "1".padStart(2, "0") string 함수(자릿수에 못미치면 주어진 매개변수로 채움)
+// // -> "01"
+// // "1".padEnd(2,"0")
+// // -> "10"
+
+
+// 9. clock 자리수
+
+// const clock = document.querySelector("h2#clock");
+
+// function getClock(){
+//     const date = new Date();
+//     const hours = String(date.getHours()).padStart(2,"0");
+//     const minutes = String(date.getMinutes()).padStart(2,"0");
+//     const seconds = String(date.getSeconds()).padStart(2,"0");
+
+//     clock.innerText = (`${hours}:${minutes}:${seconds}`)
+// }
+
+// setInterval(getClock, 1000);
+
+
+
+// 10. random
+//math.random() 0부터 1까지 랜덤 수 반환
+//math.round() 반올림해서 정수를 반환
+//math.ceil() 올림해서 정수를 반환
+//math.floor() 내림해서 정수를 반환
 
 
 
