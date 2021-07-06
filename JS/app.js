@@ -181,6 +181,25 @@
 //math.ceil() 올림해서 정수를 반환
 //math.floor() 내림해서 정수를 반환
 
+// 11. forEach()
+// Array요소를 각각 실행 해줌
 
+// function sayHello(item){
+//   console.log(item);
+// }
 
+// const savedToDos = localStorage.getItem(TODOS_KEY);
 
+// if(savedToDos){
+//   const parsedToDos = JSON.parse(savedToDos);
+//   parsedToDos.forEach(sayHello);    // parsedToDos.forEach((item) => console.log(item)) 랑 동일
+// }
+
+// 12. filter() 특정한 요소를 제와하고 Array를 다시 만듬
+      // true를 반환하면 남겨짐
+// function sexyFilter(item){return item !==3}
+// [1,2,3,4,5].filter(sexyFilter) // [1,2,3,4,5].filter(item =>item !==3);
+// -> [1,2,4,5]
+// 13. element가 만들어질 때 랜덤한 아이디 부여
+
+// Date.now()
